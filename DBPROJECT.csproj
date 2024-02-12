@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C6ACBAF-DF54-4429-B0AD-A45A94086CB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBPROJECT</RootNamespace>
+    <AssemblyName>DBPROJECT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Cheeseburger.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBox.cs" />
+    <Compile Include="frmMessageOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageOK.designer.cs">
+      <DependentUpon>frmMessageOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageWarning.designer.cs">
+      <DependentUpon>frmMessageWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageYesNo.designer.cs">
+      <DependentUpon>frmMessageYesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageYesNoCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageYesNoCancel.designer.cs">
+      <DependentUpon>frmMessageYesNoCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.cs">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageOK.resx">
+      <DependentUpon>frmMessageOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageWarning.resx">
+      <DependentUpon>frmMessageWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageYesNo.resx">
+      <DependentUpon>frmMessageYesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageYesNoCancel.resx">
+      <DependentUpon>frmMessageYesNoCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="images\smallicons.zip" />
+    <None Include="images\test" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cheeseburger.ico" />
+    <Content Include="images\2people.bmp" />
+    <Content Include="images\ACCOUNT.BMP" />
+    <Content Include="images\add-icon-png-2459-Windows.ico" />
+    <Content Include="images\add-icon-png-2459.png" />
+    <Content Include="images\add-icon-png-2464-Windows.ico" />
+    <Content Include="images\add-icon-png-2464.png" />
+    <Content Include="images\Address Book.ico" />
+    <Content Include="images\AFP Server.ico" />
+    <Content Include="images\agt_login.ico" />
+    <Content Include="images\aim.ico" />
+    <Content Include="images\alert-icon-1584-Windows.ico" />
+    <Content Include="images\alert-icon-1584.png" />
+    <Content Include="images\Applications Folder.ico" />
+    <Content Include="images\ark.ico" />
+    <Content Include="images\arrow-icon-1151-Windows.ico" />
+    <Content Include="images\arrow-icon-1151.png" />
+    <Content Include="images\arrow-icon-1156-Windows.ico" />
+    <Content Include="images\arrow-icon-1156.png" />
+    <Content Include="images\Arts Leisure Pavilion.ico" />
+    <Content Include="images\Author.bmp" />
+    <Content Include="images\beachball.ico" />
+    <Content Include="images\Big Track.ico" />
+    <Content Include="images\billsandCoins.bmp" />
+    <Content Include="images\Binoculars.ico" />
+    <Content Include="images\Blueberry.ico" />
+    <Content Include="images\Box opened.ico" />
+    <Content Include="images\brief-icon-14279-Windows.ico" />
+    <Content Include="images\brief-icon-14279.png" />
+    <Content Include="images\browser.ico" />
+    <Content Include="images\bucket and shovel.ico" />
+    <Content Include="images\Bulletin Board.ico" />
+    <Content Include="images\Burn.ico" />
+    <Content Include="images\Business Finance Plaza.ico" />
+    <Content Include="images\Calandar.ico" />
+    <Content Include="images\camera-icon-39-Windows.ico" />
+    <Content Include="images\camera-icon-39.jpg" />
+    <Content Include="images\case-icon-png-2672-Windows.ico" />
+    <Content Include="images\case-icon-png-2672.png" />
+    <Content Include="images\ChalkEdit.ico" />
+    <Content Include="images\check-tick-icon-14143 - 25x25.png" />
+    <Content Include="images\check-tick-icon-14143 - Copy.png" />
+    <Content Include="images\check-tick-icon-14143.png" />
+    <Content Include="images\check-tick-icon-14151-Windows.ico" />
+    <Content Include="images\check-tick-icon-14151.png" />
+    <Content Include="images\check.bmp" />
+    <Content Include="images\Cheeseburger.ico" />
+    <Content Include="images\Cherry.ico" />
+    <Content Include="images\Classic Mac.ico" />
+    <Content Include="images\clear-icon-9196-Windows.ico" />
+    <Content Include="images\clear-icon-9196.gif" />
+    <Content Include="images\Clipboard.ico" />
+    <Content Include="images\Clipping %28PICT%29.ico" />
+    <Content Include="images\Clipping %28Sound%29.ico" />
+    <Content Include="images\Clipping %28Text%29.ico" />
+    <Content Include="images\Clipping Picture.ico" />
+    <Content Include="images\Clipping Sound.ico" />
+    <Content Include="images\close-button-png-30227 - 15x15.png" />
+    <Content Include="images\close-button-png-30227 - 5x5.png" />
+    <Content Include="images\close-button-png-30227 - 6x6.png" />
+    <Content Include="images\close-button-png-30227 - 6x6new.png" />
+    <Content Include="images\close-button-png-30227 - 8x8.png" />
+    <Content Include="images\close-button-png-30227-Windows.ico" />
+    <Content Include="images\close-button-png-30227.png" />
+    <Content Include="images\ClosedEye.jpg" />
+    <Content Include="images\Community Center.ico" />
+    <Content Include="images\Compose Mail.ico" />
+    <Content Include="images\Computer Center.ico" />
+    <Content Include="images\computer-user-icon-16384-Windows.ico" />
+    <Content Include="images\computer-user-icon-16384.png" />
+    <Content Include="images\computer-user-icon-16385-Windows.ico" />
+    <Content Include="images\computer-user-icon-16385.png" />
+    <Content Include="images\cooler.ico" />
+    <Content Include="images\crab.ico" />
+    <Content Include="images\Crayons.ico" />
+    <Content Include="images\customers-icon-35917-Windows.ico" />
+    <Content Include="images\customers-icon-35917.png" />
+    <Content Include="images\customers.bmp" />
+    <Content Include="images\Customize.ico" />
+    <Content Include="images\Dibellas_Sub.ico" />
+    <Content Include="images\eApple.ico" />
+    <Content Include="images\eBrowser.ico" />
+    <Content Include="images\eCash.ico" />
+    <Content Include="images\eConference.ico" />
+    <Content Include="images\eConversation.ico" />
+    <Content Include="images\edit-icon-png-3583-Windows.ico" />
+    <Content Include="images\edit-icon-png-3583.png" />
+    <Content Include="images\edit-icon-png-3597-Windows.ico" />
+    <Content Include="images\edit-icon-png-3597.png" />
+    <Content Include="images\eFactory.ico" />
+    <Content Include="images\eFiles.ico" />
+    <Content Include="images\eFolder blue.ico" />
+    <Content Include="images\eFolder.ico" />
+    <Content Include="images\eForum.ico" />
+    <Content Include="images\email-attachment-icon-11161-Windows.ico" />
+    <Content Include="images\email-attachment-icon-11161.png" />
+    <Content Include="images\email-attachment-icon-11168-Windows.ico" />
+    <Content Include="images\email-attachment-icon-11168.png" />
+    <Content Include="images\email-attachment-icon-11181-Windows.ico" />
+    <Content Include="images\email-attachment-icon-11181.png" />
+    <Content Include="images\email-icon-122-Windows.ico" />
+    <Content Include="images\email-icon-122.png" />
+    <Content Include="images\email-server-icon-png-7245-Windows.ico" />
+    <Content Include="images\email-server-icon-png-7245.png" />
+    <Content Include="images\eMate 300.ico" />
+    <Content Include="images\Encryption.ico" />
+    <Content Include="images\eNews.ico" />
+    <Content Include="images\eraser-icon-23405-Windows.ico" />
+    <Content Include="images\eraser-icon-23405.png" />
+    <Content Include="images\eReader 2.ico" />
+    <Content Include="images\eReader.ico" />
+    <Content Include="images\eShoppers.ico" />
+    <Content Include="images\eSnapshot.ico" />
+    <Content Include="images\eWorld Folder.ico" />
+    <Content Include="images\eWorld!.ico" />
+    <Content Include="images\exchangenotes.bmp" />
+    <Content Include="images\exit-icon-4625  Small.jpg" />
+    <Content Include="images\exit-icon-4625  Small2.jpg" />
+    <Content Include="images\exit-icon-4625  Small3.jpg" />
+    <Content Include="images\exit-icon-4625 Medium.jpg" />
+    <Content Include="images\exit-icon-4625-Windows.ico" />
+    <Content Include="images\exit-icon-4625.jpg" />
+    <Content Include="images\Extensions â.ico" />
+    <Content Include="images\Extentions %28dis%29 â.ico" />
+    <Content Include="images\eye-icon-1463-Windows.ico" />
+    <Content Include="images\eye-icon-1463.png" />
+    <Content Include="images\fast-forward-double-right-arrows-symbol.png" />
+    <Content Include="images\Favorites â.ico" />
+    <Content Include="images\filter-icon-25210-Windows.ico" />
+    <Content Include="images\filter-icon-25210.png" />
+    <Content Include="images\filter-icon-25213-Windows.ico" />
+    <Content Include="images\filter-icon-25213.png" />
+    <Content Include="images\filter-icon-25214-Windows.ico" />
+    <Content Include="images\filter-icon-25214.png" />
+    <Content Include="images\Finance Folder.ico" />
+    <Content Include="images\Finances.ico" />
+    <Content Include="images\find-icon-38326-Windows.ico" />
+    <Content Include="images\find-icon-38326.png" />
+    <Content Include="images\Find.ico" />
+    <Content Include="images\finish1.bmp" />
+    <Content Include="images\fire-department-icon-16464-Windows.ico" />
+    <Content Include="images\fire-department-icon-16464.png" />
+    <Content Include="images\flat-icon-png-40269-Windows.ico" />
+    <Content Include="images\flat-icon-png-40269.png" />
+    <Content Include="images\Folder Blueberry.ico" />
+    <Content Include="images\Folder Tangerine.ico" />
+    <Content Include="images\folderBlue.bmp" />
+    <Content Include="images\FolderCabinet.bmp" />
+    <Content Include="images\FolderYellow.bmp" />
+    <Content Include="images\forgot-password-icon-18359 - 10x10.png" />
+    <Content Include="images\forgot-password-icon-18359 - 5x5 - Copy.png" />
+    <Content Include="images\forgot-password-icon-18359-Windows.ico" />
+    <Content Include="images\forgot-password-icon-18359.png" />
+    <Content Include="images\Foundation Masonry.ico" />
+    <Content Include="images\Fuchikoma.ico" />
+    <Content Include="images\G4.ico" />
+    <Content Include="images\G5.ico" />
+    <Content Include="images\Games Folder.ico" />
+    <Content Include="images\Generic Folder.ico" />
+    <Content Include="images\Generic PC.ico" />
+    <Content Include="images\Get Info.ico" />
+    <Content Include="images\Get Mail.ico" />
+    <Content Include="images\Ghost.ico" />
+    <Content Include="images\Globe.ico" />
+    <Content Include="images\Grape.ico" />
+    <Content Include="images\Graphite.ico" />
+    <Content Include="images\group-png-3236-Windows.ico" />
+    <Content Include="images\group-png-3236.png" />
+    <Content Include="images\group-png-3237.png" />
+    <Content Include="images\G_Shock.ico" />
+    <Content Include="images\Home Folder.ico" />
+    <Content Include="images\Home.ico" />
+    <Content Include="images\house-png-170-Windows.ico" />
+    <Content Include="images\house-png-170.png" />
+    <Content Include="images\house-png-178-Windows.ico" />
+    <Content Include="images\house-png-178.png" />
+    <Content Include="images\house-png-181-Windows.ico" />
+    <Content Include="images\house-png-181.png" />
+    <Content Include="images\housewhite.bmp" />
+    <Content Include="images\HTML Editor.ico" />
+    <Content Include="images\HumVee.ico" />
+    <Content Include="images\IF Folder.ico" />
+    <Content Include="images\iFolder Bondi.ico" />
+    <Content Include="images\iFolder Grape.ico" />
+    <Content Include="images\Info Booth.ico" />
+    <Content Include="images\information-icon-6066-Windows.ico" />
+    <Content Include="images\information-icon-6066.png" />
+    <Content Include="images\information-icon-6080-Windows.ico" />
+    <Content Include="images\information-icon-6080.png" />
+    <Content Include="images\Internet Downloads.ico" />
+    <Content Include="images\Internet Search Sites.ico" />
+    <Content Include="images\item-icon-2192-Windows.ico" />
+    <Content Include="images\item-icon-2192.jpg" />
+    <Content Include="images\kdmconfig.ico" />
+    <Content Include="images\kservices.ico" />
+    <Content Include="images\ksmiletris.ico" />
+    <Content Include="images\kuser.ico" />
+    <Content Include="images\Laptop_2.ico" />
+    <Content Include="images\Larry the Lobster.ico" />
+    <Content Include="images\Lava Lamp.ico" />
+    <Content Include="images\Lava Lamp1.ico" />
+    <Content Include="images\Lava Lamp2.ico" />
+    <Content Include="images\Lava Lamp3.ico" />
+    <Content Include="images\Lava Lamp4.ico" />
+    <Content Include="images\Learning Center.ico" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\leftdouble-arrow.png" />
+    <Content Include="images\Library Folder.ico" />
+    <Content Include="images\Library.ico" />
+    <Content Include="images\Lime.ico" />
+    <Content Include="images\list-icon-1444-Windows.ico" />
+    <Content Include="images\list-icon-1444.gif" />
+    <Content Include="images\Little Red Mail Truck.ico" />
+    <Content Include="images\Location File.ico" />
+    <Content Include="images\Location Generic.ico" />
+    <Content Include="images\log-off-icon-8380-Windows.ico" />
+    <Content Include="images\log-off-icon-8380.png" />
+    <Content Include="images\log-off-icon-8390-Windows.ico" />
+    <Content Include="images\log-off-icon-8390.png" />
+    <Content Include="images\log-off-icon-8392 - Large.jpg" />
+    <Content Include="images\log-off-icon-8392 - Medium.jpg" />
+    <Content Include="images\log-off-icon-8392 - Small.jpg" />
+    <Content Include="images\log-off-icon-8392-Windows.ico" />
+    <Content Include="images\log-off-icon-8392.jpg" />
+    <Content Include="images\login-button-png-18027-Windows.ico" />
+    <Content Include="images\login-button-png-18027.png" />
+    <Content Include="images\login-button-png-18037-Windows.ico" />
+    <Content Include="images\login-button-png-18037.png" />
+    <Content Include="images\login-button-png-Medium.png" />
+    <Content Include="images\login-button-png-Medium2.png" />
+    <Content Include="images\login-icon-3060 %281%29.png" />
+    <Content Include="images\login-icon-3060-Windows.ico" />
+    <Content Include="images\login-icon-3060.png" />
+    <Content Include="images\Login1.bmp" />
+    <Content Include="images\login2.bmp" />
+    <Content Include="images\mailbox.bmp" />
+    <Content Include="images\Marketplace.ico" />
+    <Content Include="images\Marmalade Moon.ico" />
+    <Content Include="images\meeting-icon-261.ico" />
+    <Content Include="images\meeting-icon-261.png" />
+    <Content Include="images\minimize-icon-23774-Windows.ico" />
+    <Content Include="images\minimize-icon-23774.png" />
+    <Content Include="images\minimize-icon-23775-Windows.ico" />
+    <Content Include="images\minimize-icon-23775.jpg" />
+    <Content Include="images\minimize-icon-23778-Windows.ico" />
+    <Content Include="images\minimize-icon-23778.png" />
+    <Content Include="images\minimize-icon-23792-Windows.ico" />
+    <Content Include="images\minimize-icon-23792.png" />
+    <Content Include="images\minimize-icon2Large.png" />
+    <Content Include="images\MinimizeLarge.png" />
+    <Content Include="images\Movies Folder.ico" />
+    <Content Include="images\Movies.ico" />
+    <Content Include="images\Music Folder.ico" />
+    <Content Include="images\nettle-48491-Windows.ico" />
+    <Content Include="images\nettle-48491.png" />
+    <Content Include="images\News Flash.ico" />
+    <Content Include="images\News Kiosk.ico" />
+    <Content Include="images\Newsstand.ico" />
+    <Content Include="images\Note.ico" />
+    <Content Include="images\Notepad1.bmp" />
+    <Content Include="images\Note_Pad.ico" />
+    <Content Include="images\Office Phone.ico" />
+    <Content Include="images\Old Suitcase.ico" />
+    <Content Include="images\open-book-icon-16358-Windows.ico" />
+    <Content Include="images\open-book-icon-16358.png" />
+    <Content Include="images\open-book-icon-16359-Windows.ico" />
+    <Content Include="images\open-book-icon-16359.png" />
+    <Content Include="images\outlet-1.ico" />
+    <Content Include="images\outlet-1.png" />
+    <Content Include="images\outlet.png" />
+    <Content Include="images\outlets-icon.ico" />
+    <Content Include="images\outlets-icon.png" />
+    <Content Include="images\outlets.png" />
+    <Content Include="images\outlets3.ico" />
+    <Content Include="images\play-strore-icon-12620-Windows.ico" />
+    <Content Include="images\play-strore-icon-12620.png" />
+    <Content Include="images\point-of-sale-icon-10672-Windows.ico" />
+    <Content Include="images\point-of-sale-icon-10672.png" />
+    <Content Include="images\power-button-icon-8362-Windows.ico" />
+    <Content Include="images\power-button-icon-8362.png" />
+    <Content Include="images\print1.bmp" />
+    <Content Include="images\print2.bmp" />
+    <Content Include="images\printer-icon-1023-Windows.ico" />
+    <Content Include="images\printer-icon-1023.png" />
+    <Content Include="images\printer-icon-1030-Windows.ico" />
+    <Content Include="images\printer-icon-1030.jpg" />
+    <Content Include="images\profile-icon-png-897-Windows.ico" />
+    <Content Include="images\profile-icon-png-897.png" />
+    <Content Include="images\Public Folder.ico" />
+    <Content Include="images\Public.ico" />
+    <Content Include="images\question-icon-26801-Windows.ico" />
+    <Content Include="images\question-icon-26801.png" />
+    <Content Include="images\question-icon-26817-Windows.ico" />
+    <Content Include="images\question-icon-26817.gif" />
+    <Content Include="images\refresh-icon-10835-Windows.ico" />
+    <Content Include="images\refresh-icon-10835.jpg" />
+    <Content Include="images\refresh-icon-10841-Windows.ico" />
+    <Content Include="images\refresh-icon-10841.jpg" />
+    <Content Include="images\refresh-icon-10842-Windows.ico" />
+    <Content Include="images\refresh-icon-10850-Windows.ico" />
+    <Content Include="images\refresh-icon-10850.png" />
+    <Content Include="images\refresh-icon-10854-Windows.ico" />
+    <Content Include="images\refresh-icon-10854.jpg" />
+    <Content Include="images\refresh-icon-png-40262-Windows.ico" />
+    <Content Include="images\refresh-icon-png-40262.png" />
+    <Content Include="images\REFRESH1 - Copy %282%29.bmp" />
+    <Content Include="images\REFRESH1 - Copy.bmp" />
+    <Content Include="images\REFRESH1.bmp" />
+    <Content Include="images\remove-icon-png-7110-Windows.ico" />
+    <Content Include="images\remove-icon-png-7110.png" />
+    <Content Include="images\remove-icon-png-7120-Windows.ico" />
+    <Content Include="images\remove-icon-png-7120.png" />
+    <Content Include="images\return-button-png-34569-Windows.ico" />
+    <Content Include="images\return-button-png-34569.png" />
+    <Content Include="images\return-button-png-34581 - Small.png" />
+    <Content Include="images\return-button-png-34581 - Small2.png" />
+    <Content Include="images\return-button-png-34581 - Small3.png" />
+    <Content Include="images\return-button-png-34581 - Smaller.png" />
+    <Content Include="images\return-button-png-34581-Windows.ico" />
+    <Content Include="images\return-button-png-34581.png" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\rightdouble.png" />
+    <Content Include="images\Ruby.ico" />
+    <Content Include="images\Safari.ico" />
+    <Content Include="images\Safe closed.ico" />
+    <Content Include="images\Safety_Helmet.ico" />
+    <Content Include="images\Sage..ico" />
+    <Content Include="images\sandals.ico" />
+    <Content Include="images\sandcastle.ico" />
+    <Content Include="images\save-icon-5402 - Small.png" />
+    <Content Include="images\save-icon-5402-Windows.ico" />
+    <Content Include="images\save-icon-5402.png" />
+    <Content Include="images\search-icon-png-9965-Windows.ico" />
+    <Content Include="images\search-icon-png-9965.png" />
+    <Content Include="images\search-icon-png-9970-Windows.ico" />
+    <Content Include="images\search-icon-png-9970.png" />
+    <Content Include="images\search-icon-png-9974-Windows.ico" />
+    <Content Include="images\search-icon-png-9974.png" />
+    <Content Include="images\search-icon-png-9983-Windows.ico" />
+    <Content Include="images\search-icon-png-9983.png" />
+    <Content Include="images\search-icon-png-9996-Windows.ico" />
+    <Content Include="images\search-icon-png-9996.png" />
+    <Content Include="images\SEARCH1.bmp" />
+    <Content Include="images\SEARCH2.bmp" />
+    <Content Include="images\secure-icon-png-5001-Windows.ico" />
+    <Content Include="images\secure-icon-png-5001.png" />
+    <Content Include="images\seller-icon-7659-Windows.ico" />
+    <Content Include="images\seller-icon-7659.png" />
+    <Content Include="images\seller-icon-7670-Windows.ico" />
+    <Content Include="images\seller-icon-7670.png" />
+    <Content Include="images\seo-icon-png-2279-Windows.ico" />
+    <Content Include="images\seo-icon-png-2279.png" />
+    <Content Include="images\services-icon-png-2309-Windows.ico" />
+    <Content Include="images\services-icon-png-2309.png" />
+    <Content Include="images\severalnotes.bmp" />
+    <Content Include="images\ship.bmp" />
+    <Content Include="images\sidewalkvendors.bmp" />
+    <Content Include="images\Simple Text.ico" />
+    <Content Include="images\starfish.ico" />
+    <Content Include="images\Steamroller.ico" />
+    <Content Include="images\Steps.ico" />
+    <Content Include="images\suitcase.bmp" />
+    <Content Include="images\Tangerine.ico" />
+    <Content Include="images\test.bmp" />
+    <Content Include="images\The Doghouse.ico" />
+    <Content Include="images\The One Ring.ico" />
+    <Content Include="images\This Way.ico" />
+    <Content Include="images\timer-icon-7800-Windows.ico" />
+    <Content Include="images\timer-icon-7800.png" />
+    <Content Include="images\TOS Desk C TPring.ico" />
+    <Content Include="images\truck-icon-9001.ico" />
+    <Content Include="images\truck-icon-9001.png" />
+    <Content Include="images\truck.bmp" />
+    <Content Include="images\True Type Font.ico" />
+    <Content Include="images\txt-file-icon-1185-Windows.ico" />
+    <Content Include="images\txt-file-icon-1185.png" />
+    <Content Include="images\txt-file-icon-1192-Windows.ico" />
+    <Content Include="images\txt-file-icon-1192.png" />
+    <Content Include="images\txt-file-icon-1193-Windows.ico" />
+    <Content Include="images\txt-file-icon-1193.png" />
+    <Content Include="images\txt-file-icon-1203-Windows.ico" />
+    <Content Include="images\txt-file-icon-1203.png" />
+    <Content Include="images\UNDO1.bmp" />
+    <Content Include="images\User.ico" />
+    <Content Include="images\user1.bmp" />
+    <Content Include="images\users.bmp" />
+    <Content Include="images\users3.bmp" />
+    <Content Include="images\users4.bmp" />
+    <Content Include="images\Utilities Folder.ico" />
+    <Content Include="images\Utilities.ico" />
+    <Content Include="images\Vectrex.ico" />
+    <Content Include="images\warehouse-inventory-icon-33852-Windows.ico" />
+    <Content Include="images\warehouse-inventory-icon-33852.png" />
+    <Content Include="images\Welding_Mask.ico" />
+    <Content Include="images\x.ico" />
+    <Content Include="images\X1.bmp" />
+    <Content Include="images\X2.bmp" />
+    <Content Include="images\X3.bmp" />
+    <Content Include="images\xcalc.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
